@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayantan Mandal - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">SM</div>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+    
+    <!-- Custom cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+    
+    <!-- Progress bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    
+    <canvas id="background-canvas"></canvas>
+    
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">SM</a>
+                <div class="nav-links" id="navLinks">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="https://drive.google.com/file/d/1wdQg84B6FKS1mKsiYxvoJgkJuHjzmS1y/view?usp=drive_link" target="_blank" class="nav-link">Resume</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-subtitle">Portfolio</span>
+                <h1 class="hero-title">Sayantan Mandal</h1>
+                <p class="hero-description">
+                    Welcome to my portfolio. I'm a passionate developer and engineer with expertise in machine learning, IoT, embedded systems, and web development. Explore my projects and get in touch!
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn">
+                        View Projects <i class="fas fa-arrow-right btn-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Financial Time Resonance Engine</h3>
+                        <p class="project-description">
+                            A powerful Streamlit application that uncovers temporal resonance patterns in financial market data. It helps identify historical windows that harmonically align with current market behavior across time, price, volume, and volatility dimensions.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/sayantanmandal1/TimeMachine" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="https://timemachine.streamlit.app/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Churn Rate Calculator</h3>
+                        <p class="project-description">
+                            A streamlit application designed to calculate and visualize customer churn rates, helping businesses understand and address customer retention issues. Provides actionable insights for improving customer loyalty.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/sayantanmandal1/fluffy" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="https://fluffy.streamlit.app/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">LoRa-Based Wireless Monitoring System</h3>
+                        <p class="project-description">
+                            Established a LoRa network for sensors over 10 km², achieving 99.99% transmission reliability. Reduced sensor downtime by 20% by implementing scheduled maintenance alerts. Enhanced energy efficiency of nodes by 15% via optimized duty-cycling.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Low-Cost Solar Irradiance Measurement Device</h3>
+                        <p class="project-description">
+                            Designed an affordable device, reducing costs by 70% compared to commercial alternatives. Integrated sensors and microcontrollers, achieving measurement accuracy within ±5% of standard instruments. Validated performance against industry benchmarks.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Automated Defective Exhibit Identification System</h3>
+                        <p class="project-description">
+                            Achieved 92% accuracy in defect detection, reducing inspection time by 50%. Implemented anomaly detection techniques, reducing false positives by 30% and cutting manual inspection workload by 40%. Optimized processing pipeline, reducing data processing time by 35%.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">VibeNet Social Network</h3>
+                        <p class="project-description">
+                            Social media website design with full stack development already done using Google Firebase and React.js. Features include user authentication, real-time updates, and interactive UI elements for a modern social experience.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/sayantanmandal1/VibeNet" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Connect With Me</h2>
+            <div class="contact-content">
+                <p class="contact-text">
+                    Interested in working together or have a question? Feel free to reach out through any of my social platforms or download my resume to learn more about my experience and skills.
+                </p>
+                <div class="social-links">
+                    <a href="mailto:msayantan05@gmail.com" class="social-link">
+                        <div class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <span>msayantan05@gmail.com</span>
+                    </a>
+                    <a href="https://linkedin.com/in/sayantan-mandal-8a14b7202" target="_blank" class="social-link">
+                        <div class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <span>Sayantan Mandal</span>
+                    </a>
+                    <a href="https://www.leetcode.com/sayonara1337" target="_blank" class="social-link">
+                        <div class="social-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <span>sayonara1337</span>
+                    </a>
+                    <a href="https://instagram.com/ig_sayantan_" target="_blank" class="social-link">
+                        <div class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <span>ig_sayantan_</span>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1wdQg84B6FKS1mKsiYxvoJgkJuHjzmS1y/view?usp=drive_link" target="_blank" class="social-link">
+                        <div class="social-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <span>Resume</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p class="footer-text">© 2025 Sayantan Mandal. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <a href="#" class="scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+    
+    <script>
+        // Fix for the loading screen issue - make sure the loader gets removed
+        document.addEventListener('DOMContentLoaded', function() {
+            // Try to remove loader after a fixed timeout even if the load event doesn't fire properly
+            setTimeout(() => {
+                const loader = document.getElementById('loader');
+                if (loader) {
+                    loader.classList.add('fade-out');
+                    
+                    // Start animations after loader disappears
+                    setTimeout(() => {
+                        startAnimations();
+                    }, 500);
+                }
+            }, 1500);
+        });
+        
+        // Loader with a backup timeout in case window.load doesn't trigger
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const loader = document.getElementById('loader');
+                if (loader) {
+                    loader.classList.add('fade-out');
+                    
+                    // Start animations after loader disappears
+                    startAnimations();
+                }
+            }, 1000);
+        });
+        
+        // Start GSAP animations
+        function startAnimations() {
+            // Register ScrollTrigger plugin
+            gsap.registerPlugin(ScrollTrigger);
+            
+            // Hero section animations
+            gsap.to('.hero-subtitle', {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                delay: 0.5
+            });
+            
+            gsap.to('.hero-title', {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                delay: 0.7
+            });
+            
+            gsap.to('.hero-description', {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                delay: 0.9
+            });
+            
+            gsap.to('.hero-buttons', {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                delay: 1.1
+            });
+            
+            // Section title animations
+            gsap.utils.toArray('.section-title').forEach(title => {
+                gsap.to(title, {
+                    scrollTrigger: {
+                        trigger: title,
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    },
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8
+                });
+            });
+            
+            // Project card animations
+            gsap.utils.toArray('.project-card').forEach((card, index) => {
+                gsap.to(card, {
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%",
+                        toggleActions: "play none none none"
+                    },
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    delay: index * 0.2
+                });
+            });
+            
+            // Contact text animations
+            gsap.to('.contact-text', {
+                scrollTrigger: {
+                    trigger: '.contact-text',
+                    start: "top 80%",
+                    toggleActions: "play none none none"
+                },
+                opacity: 1,
+                y: 0,
+                duration: 0.8
+            });
+            
+            // Social links animations
+            gsap.utils.toArray('.social-link').forEach((link, index) => {
+                gsap.to(link, {
+                    scrollTrigger: {
+                        trigger: link,
+                        start: "top 85%",
+                        toggleActions: "play none none none"
+                    },
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.5,
+                    delay: 0.3 + (index * 0.1)
+                });
+            });
+        }
+
+        // Custom cursor
+        const cursorDot = document.getElementById('cursor-dot');
+        const cursorOutline = document.getElementById('cursor-outline');
+
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+            
+            if (cursorDot) {
+                cursorDot.style.left = `${posX}px`;
+                cursorDot.style.top = `${posY}px`;
+            }
+            
+            // Smooth follow for cursor outline with slight delay
+            if (cursorOutline) {
+                cursorOutline.animate({
+                    left: `${posX}px`,
+                    top: `${posY}px`
+                }, { duration: 500, fill: 'forwards' });
+            }
+        });
+
+        // Add hover effect for links and buttons
+        const hoverElements = document.querySelectorAll('a, button, .btn');
+        hoverElements.forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                if (cursorOutline) {
+                    cursorOutline.classList.add('cursor-hover');
+                }
+            });
+            
+            element.addEventListener('mouseleave', () => {
+                if (cursorOutline) {
+                    cursorOutline.classList.remove('cursor-hover');
+                }
+            });
+        });
+
+        // Mouse trail effect
+        function createTrail() {
+            if (!cursorDot) return;
+            
+            const trail = document.createElement('div');
+            trail.className = 'trail';
+            document.body.appendChild(trail);
+            
+            setTimeout(() => {
+                trail.style.left = `${cursorDot.offsetLeft + 5}px`;
+                trail.style.top = `${cursorDot.offsetTop + 5}px`;
+                trail.style.opacity = 1;
+                
+                setTimeout(() => {
+                    trail.style.opacity = 0;
+                    setTimeout(() => {
+                        document.body.removeChild(trail);
+                    }, 500);
+                }, 100);
+            }, 10);
+        }
+
+        // Create trail effect on mouse move (throttled)
+        let lastTrailTime = 0;
+        window.addEventListener('mousemove', () => {
+            const now = Date.now();
+            if (now - lastTrailTime > 50) {
+                createTrail();
+                lastTrailTime = now;
+            }
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                if (header) header.classList.add('scrolled');
+            } else {
+                if (header) header.classList.remove('scrolled');
+            }
+        });
+
+        // Progress bar
+        const progressBar = document.getElementById('progress-bar');
+        window.addEventListener('scroll', () => {
+            if (!progressBar) return;
+            
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            progressBar.style.width = scrolled + '%';
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if (!scrollTopBtn) return;
+            
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.add('active');
+            } else {
+                scrollTopBtn.classList.remove('active');
+            }
+        });
+
+        if (scrollTopBtn) {
+            scrollTopBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        if (mobileMenuBtn && navLinks) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                
+                // Change icon
+                const icon = mobileMenuBtn.querySelector('i');
+                if (icon) {
+                    if (navLinks.classList.contains('active')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                }
+            });
+        }
+
+        // Close mobile menu when clicking a link
+        const navLinkItems = document.querySelectorAll('.nav-link');
+        navLinkItems.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    const icon = mobileMenuBtn?.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                }
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80, // Adjust for header height
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Three.js background canvas
+        function initThreeJsBackground() {
+            const canvas = document.getElementById('background-canvas');
+            if (!canvas) return;
+            
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            
+            const renderer = new THREE.WebGLRenderer({
+                canvas: canvas,
+                antialias: true,
+                alpha: true
+            });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            
+            // Create particles
+            const particlesGeometry = new THREE.BufferGeometry();
+            const particlesCount = 1500;
+            
+            const posArray = new Float32Array(particlesCount * 3);
+            
+            for (let i = 0; i < particlesCount * 3; i++) {
+                posArray[i] = (Math.random() - 0.5) * 5;
+            }
+            
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            
+            // Material
+            const particlesMaterial = new THREE.PointsMaterial({
+                size: 0.005,
+                color: 0xe31b23,
+                transparent: true,
+                opacity: 0.8
+            });
+            
+            // Mesh
+            const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+            scene.add(particlesMesh);
+            
+            camera.position.z = 2;
+            
+            // Mouse position for interactive movement
+            const mouse = {
+                x: 0,
+                y: 0
+            };
+            
+            window.addEventListener('mousemove', (event) => {
+                mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+                mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+            });
+            
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+            
+            // Animation loop
+            function animate() {
+                requestAnimationFrame(animate);
+                
+                particlesMesh.rotation.x += 0.0005;
+                particlesMesh.rotation.y += 0.0005;
+                
+                // Interactive mouse movement
+                particlesMesh.rotation.x -= mouse.y * 0.0003;
+                particlesMesh.rotation.y += mouse.x * 0.0003;
+                
+                renderer.render(scene, camera);
+            }
+            
+            animate();
+        }
+
+        // Initialize Three.js background
+        initThreeJsBackground();
+    </script>
+</body>
+</html>
